@@ -3,8 +3,6 @@ services:
   srv:
     build: .
     image: cc-tools
-    ports:
-      - 222:222
     container_name: cc-tools
     command: sleep infinity
 
