@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  srv:
+    build: .
+    image: cc-http-simple
+    ports:
+      - 8081:8081
+    container_name: cc-http-simple
+
+networks:
+  default:
+    external:
+      name: cc2024
