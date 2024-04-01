@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  srv:
+    build: .
+    image: cc-echo
+    ports:
+      - 4002:4002/udp
+      - 5002:5002/tcp
+    container_name: cc-echo
+
+networks:
+  default:
+    external:
+      name: cc2024

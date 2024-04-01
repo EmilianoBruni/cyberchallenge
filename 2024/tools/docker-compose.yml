@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  srv:
+    build: .
+    image: cc-tools
+    ports:
+      - 222:222
+    container_name: cc-tools
+    command: sleep infinity
+
+networks:
+  default:
+    external:
+      name: cc2024
