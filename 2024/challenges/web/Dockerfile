@@ -2,6 +2,6 @@ FROM cc-challenge-base
 
 ARG CHNUM
 
-COPY ${CHNUM}/*.py .
+COPY --chown=python:python ${CHNUM}/*.py .
 
 CMD ["ash"]
