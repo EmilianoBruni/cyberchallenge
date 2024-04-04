@@ -1,0 +1,48 @@
+docker run hello-world
+docker run nginx
+docker run -p 80:80 nginx
+docker run -d -p 80:80 nginx
+docker container ps
+docker stop ...
+docker container ps
+docker container ps -a
+docker start ...
+docker ps -a
+docker rm ...
+docker run --rm -p 80:80 -d --name mynginx nginx
+docker exec mynginx echo "Ciao"
+docker exec mynginx /bin/bash
+docker exec -ti mynginx /bin/bash
+ps/vi/vim/ping
+cat /etc/debian_version
+docker attach mynginx
+docker ps -a
+docker run --rm -p 80:80 -d --name mynginx --cpus=".5" nginx
+docker exec -ti /bin/bash
+cd /usr/share/nginx/html
+vi index.html
+apt-get update
+apt-get install vim
+vim index.html
+docker stop mynginx
+docker run --rm -p 80:80 --name mynginx nginx
+docker run --rm -p 80:80 -d --name mynginx -v nginx_vol:/usr/share/nginx/html nginx
+docker exec -ti /bin/bash
+cd /usr/share/nginx/html
+vi index.html
+apt-get update
+apt-get install vim
+vim index.html
+docker stop mynginx
+docker run --rm -p 80:80 -d --name mynginx -v nginx_vol:/usr/share/nginx/html nginx
+docker stop mynginx
+docker run --rm -p 80:80 -d --name mynginx -v /root/html:/usr/share/nginx/html nginx
+
+
+
+
+
+
+
+
+
