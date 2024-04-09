@@ -13,15 +13,20 @@ def print_response(response):
 url = 'http://web-11.challs.olicyber.it/'
 
 s = requests.Session()
+print("Login to the resource and got a  csrf token:")
 req = s.post(f'{url}login', json={"username": "admin", "password": "admin"})
 
 token = req.json()['csrf']
+print(f"{token}\n")
 flag = ''
 
 for i in range(4):
-    req = s.get(f'{url}flag_piece', params={ "index": i, "csrf": token }, cookies=req.cookies)
+    print(f"Getting flag piece {i} with csrf token: {token}\n")
+    req = s.get(f'{url}flag_piece', params={ "index": i, "csrf": token })
     print_response(req)
     token = req.json()['csrf']
-    flag += req.json()['flag_piece']
-    
-print(flag)
+    flag_piece = req.json()['flag_piece']
+    flag += flag_piece
+    print(f"Flag piece {i}: {flag_piece}. New token: {token}\n")
+
+print (f"Full flag: {flag}")
