@@ -1,0 +1,116 @@
+{
+   "schemaVersion": 1,
+   "name": "cc-imagescanner",
+   "tag": "latest",
+   "architecture": "amd64",
+   "fsLayers": [
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+      },
+      {
+         "blobSum": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1"
+      },
+      {
+         "blobSum": "sha256:9ab6e8bc4c414c72414c23a86a8d80877ef1d3746d09c65efeae32ff984cd2f0"
+      },
+      {
+         "blobSum": "sha256:469905b8508232ff1112a3c439db471d997ac8464a4e885920a4b093d1b77deb"
+      },
+      {
+         "blobSum": "sha256:2f706c7033bce0d97269f238a0423a857d892831d5e8f3a4080f16dd990758f0"
+      },
+      {
+         "blobSum": "sha256:3298645da38281dfdd66f3debb2cb4ac72884568813050a4140435c7215eb56e"
+      },
+      {
+         "blobSum": "sha256:d25ddb2c90685b6e36c50ae4300f187a2b8c6a6527dd1630800def08c1f68d5a"
+      },
+      {
+         "blobSum": "sha256:92c76a64c6765f39aef52cf68f92fbac1fc3c81061a0a70587aca62e4f0970f0"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:63e9bbe323274e77e58d77c6ab6802d247458f784222fbb07a2556d6ec74ee05"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      }
+   ],
+   "history": [
+      {
+         "v1Compatibility": "{\"architecture\":\"amd64\",\"config\":{\"Env\":[\"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"],\"Cmd\":[\"/bin/sh\",\"-c\",\"sleep 1000\"],\"Labels\":{\"com.docker.compose.project\":\"image\",\"com.docker.compose.service\":\"imagescanner\",\"com.docker.compose.version\":\"2.24.6\",\"org.opencontainers.image.ref.name\":\"ubuntu\",\"org.opencontainers.image.version\":\"20.04\"},\"ArgsEscaped\":true,\"OnBuild\":null},\"created\":\"2024-03-11T09:09:22.988711889Z\",\"id\":\"6fcbc2f315219c021b3c69a797953b96d88a7510e944fe0f80889f697ade4c53\",\"os\":\"linux\",\"parent\":\"9ed487170751df95cf04a1b071783f8588ab4b857bba779ed5319f5735dfa965\",\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"9ed487170751df95cf04a1b071783f8588ab4b857bba779ed5319f5735dfa965\",\"parent\":\"4aadd694c4750c68a953ff409a68dd33562dff621bd436cba293bd32e763d83f\",\"comment\":\"buildkit.dockerfile.v0\",\"created\":\"2024-03-11T09:09:22.988711889Z\",\"container_config\":{\"Cmd\":[\"RUN /bin/sh -c echo \\\"The flag is stored in a secret place\\\" # buildkit\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"4aadd694c4750c68a953ff409a68dd33562dff621bd436cba293bd32e763d83f\",\"parent\":\"cc1899b80a2d95e4f257dd7b3edb4263301c08f411f92c0913e5f1380209a299\",\"comment\":\"buildkit.dockerfile.v0\",\"created\":\"2024-03-11T09:09:22.491850896Z\",\"container_config\":{\"Cmd\":[\"RUN /bin/sh -c ls -al # buildkit\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"cc1899b80a2d95e4f257dd7b3edb4263301c08f411f92c0913e5f1380209a299\",\"parent\":\"47b7bd21e518efea862f4346bbae5b435a629610be3193e6cedb1a08f8e73cfd\",\"comment\":\"buildkit.dockerfile.v0\",\"created\":\"2024-03-11T09:09:22.036851595Z\",\"container_config\":{\"Cmd\":[\"RUN /bin/sh -c mv temp flag_instructions.txt # buildkit\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"47b7bd21e518efea862f4346bbae5b435a629610be3193e6cedb1a08f8e73cfd\",\"parent\":\"861c93ddd8f55bc5e76e8a131d7c4c4c0bd9853640139435b5e6f6da8888f3b5\",\"comment\":\"buildkit.dockerfile.v0\",\"created\":\"2024-03-11T09:09:21.542264302Z\",\"container_config\":{\"Cmd\":[\"RUN /bin/sh -c head -n -1 flag_instructions.txt \\u003e temp # buildkit\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"861c93ddd8f55bc5e76e8a131d7c4c4c0bd9853640139435b5e6f6da8888f3b5\",\"parent\":\"dc5dcb53dccedd91ade10df5187e0c15791f2b77bce349eed398052d5938f18e\",\"comment\":\"buildkit.dockerfile.v0\",\"created\":\"2024-03-11T09:09:21.13319572Z\",\"container_config\":{\"Cmd\":[\"COPY flag_instructions.txt . # buildkit\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"dc5dcb53dccedd91ade10df5187e0c15791f2b77bce349eed398052d5938f18e\",\"parent\":\"4da5fc6e2d5b728a3b970dbd0ae928594176bc7596b9cc27e2759771f6810653\",\"comment\":\"buildkit.dockerfile.v0\",\"created\":\"2024-03-11T09:09:21.105501109Z\",\"container_config\":{\"Cmd\":[\"RUN /bin/sh -c apt autoremove # buildkit\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"4da5fc6e2d5b728a3b970dbd0ae928594176bc7596b9cc27e2759771f6810653\",\"parent\":\"f5b0865202466b993ac9f1d58f38dde3d4a4335048671f9e9d6536be906b3292\",\"comment\":\"buildkit.dockerfile.v0\",\"created\":\"2024-03-11T09:09:19.528964115Z\",\"container_config\":{\"Cmd\":[\"RUN /bin/sh -c apt upgrade -y # buildkit\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"f5b0865202466b993ac9f1d58f38dde3d4a4335048671f9e9d6536be906b3292\",\"parent\":\"9b03e2ed31b9422782fa58ac2880d30ad4aeca1f5d9186f9535261edbee7149a\",\"comment\":\"buildkit.dockerfile.v0\",\"created\":\"2024-03-11T09:09:18.046999089Z\",\"container_config\":{\"Cmd\":[\"RUN /bin/sh -c apt update # buildkit\"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"9b03e2ed31b9422782fa58ac2880d30ad4aeca1f5d9186f9535261edbee7149a\",\"parent\":\"0b73258863900ab7daf51f73449e4ddc5af885036e1bc2286852ba4091d340e3\",\"created\":\"2024-02-16T21:32:52.391333754Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  CMD [\\\"/bin/bash\\\"]\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"0b73258863900ab7daf51f73449e4ddc5af885036e1bc2286852ba4091d340e3\",\"parent\":\"314371bc38ca2cbdc6e4f6c9ecf2a4de7aeaf31c6d71a45872671a5063fb1b5f\",\"created\":\"2024-02-16T21:32:52.17640841Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop) ADD file:a25798f31219000d6a82d2c9258743926b1a400530d12dbb1eadf2c2519f9888 in / \"]}}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"314371bc38ca2cbdc6e4f6c9ecf2a4de7aeaf31c6d71a45872671a5063fb1b5f\",\"parent\":\"b14a7346a5c3b89b4886c1d8576cbcbd73d2b85ae2e344e71602eec95c3f6682\",\"created\":\"2024-02-16T21:32:49.758913757Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  LABEL org.opencontainers.image.version=20.04\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"b14a7346a5c3b89b4886c1d8576cbcbd73d2b85ae2e344e71602eec95c3f6682\",\"parent\":\"8e9880e2f2f433621c34c94d346eecaf8e8e500e3e55f52a6c322d2f747ae137\",\"created\":\"2024-02-16T21:32:49.719896531Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  LABEL org.opencontainers.image.ref.name=ubuntu\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"8e9880e2f2f433621c34c94d346eecaf8e8e500e3e55f52a6c322d2f747ae137\",\"parent\":\"3690474eb5b4b26fdfbd89c6e159e8cc376ca76ef48032a30fa6aafd56337880\",\"created\":\"2024-02-16T21:32:49.694673293Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH\"]},\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"3690474eb5b4b26fdfbd89c6e159e8cc376ca76ef48032a30fa6aafd56337880\",\"created\":\"2024-02-16T21:32:49.66167695Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop)  ARG RELEASE\"]},\"throwaway\":true}"
+      }
+   ],
+   "signatures": [
+      {
+         "header": {
+            "jwk": {
+               "crv": "P-256",
+               "kid": "3KB3:L5MF:SFZX:RDZ7:SPZ2:5RBI:M36N:KX34:QRNV:SMYN:HSXG:Y573",
+               "kty": "EC",
+               "x": "3rwXCmFm0Zs5iG5h4KLlCFpqv36mtSl1fb3VCVX6eHk",
+               "y": "llV9_Kfg7K0nmAT5zUPwm2Ofy1h8WVdBnaWghvA-7gM"
+            },
+            "alg": "ES256"
+         },
+         "signature": "HdC4Ee3OTKerXH4zywO2QHhrg2oZBsUhaO5l8RLUmUqbcvISXS-6pEwjYnuKa_zoeUs3HpFXymjl8XX3kMaXag",
+         "protected": "eyJmb3JtYXRMZW5ndGgiOjc2NTEsImZvcm1hdFRhaWwiOiJDbjAiLCJ0aW1lIjoiMjAyNC0wNC0xMlQxMDo1MDowNloifQ"
+      }
+   ]
+}

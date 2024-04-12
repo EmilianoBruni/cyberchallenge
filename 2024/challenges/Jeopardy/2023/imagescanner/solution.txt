@@ -1,0 +1,46 @@
+docker run -d --privileged --rm --name dind docker:dind
+
+1) Api docker registry test
+https://imagescanner.challs.cyberchallenge.it:5000/v2
+https://imagescanner.challs.cyberchallenge.it/v2
+
+ok. we use: cyberchallenge/saf3pass
+
+2) List repositories
+
+https://imagescanner.challs.cyberchallenge.it/v2/_catalog
+
+3) Run images on play.docker
+
+docker login https://imagescanner.challs.cyberchallenge.it
+docker pull imagescanner.challs.cyberchallenge.it/cc-imagescanner
+docker run --rm imagescanner.challs.cyberchallenge.it/cc-imagescanner 
+docker run --rm -ti imagescanner.challs.cyberchallenge.it/cc-imagescanner /bin/bash
+
+4) List tags
+
+https://imagescanner.challs.cyberchallenge.it/v2/cc-imagescanner/tags/list
+
+5) Get manifest
+
+https://imagescanner.challs.cyberchallenge.it/v2/cc-imagescanner/manifests/latest
+
+6) save image to tar
+
+docker save imagescanner.challs.cyberchallenge.it/cc-imagescanner >aa.tar
+7) Unzip tar 
+tar xvf aa.tar
+
+
+8) Run dive
+ docker run --rm -it \
+-v /var/run/docker.sock:/var/run/docker.sock \
+imagescanner.challs.cyberchallenge.it/cc-imagescanner
+
+Find sha256
+
+9) tar zxvf <sha256>
+
+10) read the flag
+
+cat flag_instructions.txt
