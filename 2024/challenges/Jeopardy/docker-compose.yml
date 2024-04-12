@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  srv:
+    build: 
+      context: .
+      args:
+        CHNUM: ${CHNUM}
+        NAME: ${NAME}
+    image: cc-ch-web-${CHNUM}-${NAME}
+    container_name: cc-ch-web-${CHNUM}-${NAME}
+    command: sleep infinity
+
+networks:
+  default:
+    name: cc2024
+    external: true
