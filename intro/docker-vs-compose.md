@@ -1,9 +1,9 @@
 title: Docker vs Docker Compose
-author:
-  name: Emiliano Bruni
+author: Emiliano Bruni
+name: Emiliano Bruni
 output: docker-vs-compose.html
 controls: true
-theme: white
+theme: jdan/cleaver-retro
 
 --
 
@@ -16,6 +16,10 @@ theme: white
 ## Cos'è Docker?
 
 Docker è una piattaforma di containerizzazione che isola le applicazioni in **container** — processi leggeri e portabili che condividono il kernel del sistema operativo host.
+
+--
+
+# Docker vs VMs
 
 A differenza delle macchine virtuali (VM), i container evitano l'overhead di un intero OS, rendendoli **più veloci** ed **efficienti** nelle risorse.
 
@@ -32,11 +36,10 @@ A differenza delle macchine virtuali (VM), i container evitano l'overhead di un 
 ## Architettura di Docker
 
 - **Docker Engine**: Il nucleo (daemon, REST API, CLI).
-- **Immagini**: Template in sola lettura (es. `python:3.9-slim`).
+- **DockerFile**: Istruzioni per creare una immagine
+- **Immagini**: Template statici in sola lettura (es. `python:3.9-slim`).
 - **Container**: Istanze eseguibili delle immagini.
 - **Volumi**: Storage persistente per i dati (es. database).
-
-> Fonte: https://docs.docker.com/get-started/overview/
 
 --
 
@@ -86,27 +89,27 @@ Automatizza networking, dipendenze e scaling per app complesse (es. web app con 
 ## Anatomia di un File docker-compose.yml
 
 ```yaml
-version: '3.8'
+version: "3.8"
 services:
-  web:
-    build: .               # Usa il Dockerfile nella directory corrente
-    ports:
-      - "8000:8000"
-    volumes:
-      - .:/app             # Ricaricamento live del codice
-    depends_on:
-      - db
-      - redis
-  db:
-    image: postgres:14
-    environment:
-      POSTGRES_PASSWORD: mysecretpassword
-    volumes:
-      - pg_data:/var/lib/postgresql/data
-  redis:
-    image: redis:alpine
+    web:
+        build: . # Usa il Dockerfile nella directory corrente
+        ports:
+            - "8000:8000"
+        volumes:
+            - .:/app # Ricaricamento live del codice
+        depends_on:
+            - db
+            - redis
+    db:
+        image: postgres:14
+        environment:
+            POSTGRES_PASSWORD: mysecretpassword
+        volumes:
+            - pg_data:/var/lib/postgresql/data
+    redis:
+        image: redis:alpine
 volumes:
-  pg_data:                 # Volume named per PostgreSQL
+    pg_data: # Volume named per PostgreSQL
 ```
 
 --
@@ -128,13 +131,13 @@ docker compose down -v
 
 ## Docker vs Docker Compose: Differenze Principali
 
-| Caratteristica       | Docker               | Docker Compose              |
-|----------------------|----------------------|-----------------------------|
-| Scope                | Singolo container    | Multi-container             |
-| Configurazione       | CLI / Dockerfile     | `docker-compose.yml`        |
-| Networking           | Manuale              | Automatico                  |
-| Dipendenze           | Non gestite          | `depends_on`                |
-| Caso d'uso tipico    | Build / Deploy       | Sviluppo locale / Stack     |
+| Caratteristica    | Docker            | Docker Compose          |
+| ----------------- | ----------------- | ----------------------- |
+| Scope             | Singolo container | Multi-container         |
+| Configurazione    | CLI / Dockerfile  | `docker-compose.yml`    |
+| Networking        | Manuale           | Automatico              |
+| Dipendenze        | Non gestite       | `depends_on`            |
+| Caso d'uso tipico | Build / Deploy    | Sviluppo locale / Stack |
 
 --
 
@@ -142,9 +145,9 @@ docker compose down -v
 
 - Testare un **singolo servizio** (es. eseguire uno script Python in un container).
 - Usare strumenti effimeri:
-  ```bash
-  docker run --rm curlimages/curl curl https://api.example.com
-  ```
+    ```bash
+    docker run --rm curlimages/curl curl https://api.example.com
+    ```
 - Costruire immagini personalizzate per il deployment.
 
 --
