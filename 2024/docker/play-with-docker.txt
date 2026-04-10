@@ -9,6 +9,10 @@ docker container ps -a
 docker start ...
 docker ps -a
 docker rm ...
+# run/attach/logs/exec
+docker attach mynginx (per detach solo se run con ti allora CTRL-P CTRL-Q oppure)
+docker attach --detach-keys="ctrl-a" mynginx
+docker logs mynginx -f
 docker run --rm -p 80:80 -d --name mynginx nginx
 docker exec mynginx echo "Ciao"
 docker exec mynginx /bin/bash
