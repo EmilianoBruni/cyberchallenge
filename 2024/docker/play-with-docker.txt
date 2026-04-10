@@ -42,6 +42,13 @@ docker run --rm -p 80:80 -d --name mynginx -v nginx_vol:/usr/share/nginx/html ng
 docker stop mynginx
 docker run --rm -p 80:80 -d --name mynginx -v /root/html:/usr/share/nginx/html nginx
 
+# come creare immagini
+docker run --rm -ti --name manual_container alpine /bin/ash
+# aggiungere vim
+apk add vim
+docker run --rm -ti --name manual_container alpine /bin/ash
+# oppure via Dockerfile
+
 
 
 
