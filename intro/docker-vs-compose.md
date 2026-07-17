@@ -19,9 +19,11 @@ Docker è una piattaforma di containerizzazione che isola le applicazioni in **c
 
 --
 
-# Docker vs VMs
+## Docker vs VMs
 
 A differenza delle macchine virtuali (VM), i container evitano l'overhead di un intero OS, rendendoli **più veloci** ed **efficienti** nelle risorse.
+
+![Docker vs VM](res/docker_vs_vm.jpg)
 
 --
 
